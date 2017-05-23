@@ -1,0 +1,15 @@
+section {
+  padding: 3rem 0;
+  &:nth-child(even){
+    background-color: $color-lightgray;
+  }
+}
+
+ul {
+  margin-left: 1rem;
+}
+
+.contain {
+  max-width: 1000px;
+  margin: 0 auto;
+}

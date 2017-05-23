@@ -1,0 +1,23 @@
+#home {
+  background-color: $color-primary;
+  color: white;
+  padding: 6rem 0;
+  h1 {
+    margin-bottom: 0.5rem;
+  }
+  p {
+    font-size: 1.3rem;
+    font-weight: 300;
+  }
+  .button-group {
+    margin: 1.5rem -0.5rem 0;
+  }
+  .button {
+    text-align: center;
+    padding: 1rem 2.5rem;
+    min-width: 13rem;
+    font-size: 1.1rem;
+    color: $color-primary;
+    margin: 0 0.5rem;
+  }
+}
