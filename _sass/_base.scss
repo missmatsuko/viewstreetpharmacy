@@ -5,11 +5,37 @@ section {
   }
 }
 
+h2 {
+  border-bottom: 4px solid $color-primary;
+  margin-bottom: 1.5rem;
+}
+
+h3 {
+  color: $color-midgray;
+  margin-bottom: 0.5rem;
+}
+
 ul {
   margin-left: 1rem;
+}
+
+small {
+  display: inline-block;
+  color: $color-primary;
 }
 
 .contain {
   max-width: 1000px;
   margin: 0 auto;
+}
+
+.list-title {
+  margin-bottom: 0.1rem;
+  font-weight: 600;
+}
+
+.hours-list {
+  dd:not(:last-child){
+    margin-bottom: 0.5rem;
+  }
 }
