@@ -2,6 +2,7 @@
 $color-primary: #25CBF9;
 $color-secondary: blue;
 $color-lightgray: #F2F4F4;
+$color-gray: #D2D4D4;
 
 /*Fonts*/
 $text-font-family: 'Work Sans', Helvetica, Arial, sans-serif;
@@ -30,4 +31,4 @@ $button-padding-rl: 1.5rem;
 
 /*Links*/
 $color-link: $color-primary;
-$color-link-hover: $color-primary;
+$color-link-hover: darken($color-primary, 10%);
