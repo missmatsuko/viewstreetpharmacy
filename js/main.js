@@ -2,7 +2,9 @@
 ---
 {% include js/Core/Kube.js %}
 {% include js/Core/Kube.Plugin.js %}
+{% include js/Core/Kube.Animation.js %}
 {% include js/Sticky/Kube.Sticky.js %}
+{% include js/Tabs/Kube.Tabs.js %}
 
 $(function(){
 
@@ -18,7 +20,7 @@ $(function(){
   });
 
   /*Smooth scroll all anchor links*/
-  $("a[href*='#']").click(function(e) {
+  /*$("a[href*='#']").click(function(e) {
       e.preventDefault();
       var hash = this.hash;
       $('html, body').animate({
@@ -26,6 +28,6 @@ $(function(){
       }, "slow", function(){
         window.location.hash = hash;
       });
-  });
+  });*/
 
 })
