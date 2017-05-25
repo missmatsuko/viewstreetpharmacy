@@ -6,6 +6,11 @@
 {% include js/Sticky/Kube.Sticky.js %}
 {% include js/Tabs/Kube.Tabs.js %}
 
+function changeSiteNavActive(newActive){
+  $('#siteNav .active').removeClass('active');
+  newActive.addClass('active');
+}
+
 $(function(){
 
   /*Add bottom border under nav when scrolled down*/
@@ -17,6 +22,11 @@ $(function(){
   $('#siteNav').on('unfixed.sticky', function()
   {
       $('#siteNav').removeClass("scrolled");
+  });
+
+  /*Change active sitenav class onclick and onscroll*/
+  $('#siteNav li').on('click',function(){
+    changeSiteNavActive($(this));
   });
 
   /*Smooth scroll all anchor links*/
