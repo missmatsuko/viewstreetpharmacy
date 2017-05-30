@@ -9,7 +9,7 @@
 
 function changeSiteNavActive(newActive){
   $('#siteNav .active').removeClass('active');
-  newActive.addClass('active');
+  $("#siteNav [href='"+newActive+"']").parent().addClass('active');
 }
 
 $(function(){
@@ -17,16 +17,15 @@ $(function(){
   /*Add bottom border under nav when scrolled down*/
   $('#siteNav').on('fixed.sticky', function()
   {
-      $('#siteNav').addClass("scrolled");
+    $('#siteNav').addClass("scrolled");
   });
 
   $('#siteNav').on('unfixed.sticky', function()
   {
-      $('#siteNav').removeClass("scrolled");
+    $('#siteNav').removeClass("scrolled");
   });
 
   $("#siteNav li").on("click",function(){
-    changeSiteNavActive($(this));
     if($("[data-target='#toggleNav']").toggleme('isOpened')){
       $("[data-target='#toggleNav']").toggleme('close');
     }
@@ -40,7 +39,23 @@ $(function(){
         scrollTop: $(hash).offset().top-$(siteNav).innerHeight()
       }, "slow", function(){
         window.location.hash = hash;
+        changeSiteNavActive(hash);
       });
+  });
+
+  /*Change active nav on scroll*/
+  $(window).on("scroll",function(){
+    var scrollPos = $(document).scrollTop();
+    $('#toggleNav a').each(function () {
+      var currLink = $(this);
+      var refElement = $(currLink.attr("href"));
+      if(scrollPos+$(window).height() > $("#contact").position().top+$("#contact").height()){
+        changeSiteNavActive("#contact");
+      }
+      else if (refElement.position().top <= scrollPos && refElement.position().top + refElement.height() > scrollPos) {
+        changeSiteNavActive(currLink[0].hash);
+      }
+    });
   });
 
 })
