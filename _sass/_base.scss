@@ -24,7 +24,12 @@ small {
   color: $color-primary;
 }
 
+.row.gutters {
+  width: 100%;
+}
+
 .contain {
+  width: 100%;
   max-width: 1000px;
   margin: 0 auto;
 }
