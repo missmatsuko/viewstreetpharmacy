@@ -25,8 +25,15 @@ $(function(){
       $('#siteNav').removeClass("scrolled");
   });
 
+  $("#siteNav li").on("click",function(){
+    changeSiteNavActive($(this));
+    if($("[data-target='#toggleNav']").toggleme('isOpened')){
+      $("[data-target='#toggleNav']").toggleme('close');
+    }
+  });
+
   /*Smooth scroll all anchor links*/
-  /*$("a[href*='#']").not("#livetabs ul li a").click(function(e) {
+  $("a[href*='#']").not("#livetabs ul li a").click(function(e) {
       e.preventDefault();
       var hash = this.hash;
       $('html, body').animate({
@@ -34,6 +41,6 @@ $(function(){
       }, "slow", function(){
         window.location.hash = hash;
       });
-  });*/
+  });
 
 })
