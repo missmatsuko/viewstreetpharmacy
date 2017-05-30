@@ -25,7 +25,7 @@ $(function(){
   });
 
   /*Smooth scroll all anchor links*/
-  $("a[href*='#']").click(function(e) {
+  $("a[href*='#']").not("#livetabs ul li a").click(function(e) {
       e.preventDefault();
       var hash = this.hash;
       $('html, body').animate({
