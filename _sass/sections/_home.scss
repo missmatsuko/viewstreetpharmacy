@@ -1,9 +1,9 @@
 #home {
   background-color: $color-primary;
   color: white;
-  padding: 3rem 0;
-  @include breakpoint(md) {
-    padding: 6rem 0;
+  padding: 6rem 0;
+  @include breakpoint(sm) {
+    padding: 3rem 0;
   }
   h1 {
     margin-bottom: 0.5rem;
