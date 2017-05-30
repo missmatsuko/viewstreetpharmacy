@@ -1,3 +1,5 @@
+---
+---
 <!doctype html>
 <html>
   <head>
@@ -63,17 +65,10 @@
           <div class="col col-8">
             <h2>News and Promotions</h2>
             <article>
-              <h3>Quit Smoking Now!</h3>
-              <p>
-                Quitting smoking is the best thing you can do to improve your health. It's never too late to quit smoking. You can save your life and save your money. You can achieve $3,000 of savings if you stop purchasing one pack of cigarettes a day. Start a new year smoke-free!
-              </p>
-              <p class="list-title">Pharmacare covers:</p>
-              <ul>
-                <li>Nicorette Gum</li>
-                <li>Nicorette Lozenge</li>
-                <li>Nicorette Inhaler</li>
-                <li>Nicoderm</li>
-              </ul>
+              {% for post in site.posts limit:1 %}
+              <h3>{{post.title}}</h3>
+              {{post.content}}
+              {% endfor %}
             </article>
             <a href="#contact" class="button">Contact Us for Details</a>
           </div>
