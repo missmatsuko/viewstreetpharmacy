@@ -6,6 +6,12 @@ header {
       border-bottom: 1px solid $color-gray;
     }
   }
+  .mobile-nav {
+    @include breakpoint(sm) {
+      display: flex;
+      justify-content: space-between;
+    }
+  }
   .logo {
     text-decoration: none;
     padding: 1rem;

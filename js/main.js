@@ -5,6 +5,7 @@
 {% include js/Core/Kube.Animation.js %}
 {% include js/Sticky/Kube.Sticky.js %}
 {% include js/Tabs/Kube.Tabs.js %}
+{% include js/Toggleme/Kube.Toggleme.js %}
 
 function changeSiteNavActive(newActive){
   $('#siteNav .active').removeClass('active');
@@ -25,7 +26,7 @@ $(function(){
   });
 
   /*Smooth scroll all anchor links*/
-  $("a[href*='#']").not("#livetabs ul li a").click(function(e) {
+  /*$("a[href*='#']").not("#livetabs ul li a").click(function(e) {
       e.preventDefault();
       var hash = this.hash;
       $('html, body').animate({
@@ -33,6 +34,6 @@ $(function(){
       }, "slow", function(){
         window.location.hash = hash;
       });
-  });
+  });*/
 
 })
