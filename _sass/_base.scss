@@ -1,5 +1,10 @@
+body {
+  background-color: #313439;
+}
+
 section {
   padding: 3rem 0;
+  background-color: white;
   &:nth-child(even){
     background-color: $color-lightgray;
   }
@@ -34,6 +39,14 @@ small {
   margin: 0 auto;
   padding-right: 2rem;
   padding-left: 2rem;
+  @include breakpoint(sm) {
+    padding-right: 1rem;
+    padding-left: 1rem;
+  }
+}
+
+.visibility-hidden {
+  visibility: hidden;
 }
 
 .list-title {

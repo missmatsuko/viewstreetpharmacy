@@ -50,27 +50,29 @@
     </header>
 
     <main>
-      <section class="row contain" id="news">
-        <div class="row gutters">
-          <div class="col col-4">
-            <h2>Hours</h2>
-            <dl class="hours-list">
-              <dt>Monday to Friday</dt>
-              <dd>8:00AM to 5:30PM</dd>
-              <dt>Saturday and Sunday</dt>
-              <dd>8:00AM to 1:30PM</dd>
-            </dl>
-            <small>Open on statutory holidays.<br>Please call <a href="tel:1-250-361-3773">250-361-3773</a> for holiday hours.</small>
-          </div>
-          <div class="col col-8">
-            <h2>News and Promotions</h2>
-            <article>
-              {% for post in site.posts limit:1 %}
-              <h3>{{post.title}}</h3>
-              {{post.content}}
-              {% endfor %}
-            </article>
-            <a href="#contact" class="button">Contact Us for Details</a>
+      <section class="row" id="news">
+        <div class="row contain">
+          <div class="row gutters">
+            <div class="col col-4">
+              <h2>Hours</h2>
+              <dl class="hours-list">
+                <dt>Monday to Friday</dt>
+                <dd>8:00AM to 5:30PM</dd>
+                <dt>Saturday and Sunday</dt>
+                <dd>8:00AM to 1:30PM</dd>
+              </dl>
+              <small>Open on statutory holidays.<br>Please call <a href="tel:1-250-361-3773">250-361-3773</a> for holiday hours.</small>
+            </div>
+            <div class="col col-8">
+              <h2>News and Promotions</h2>
+              <article>
+                {% for post in site.posts limit:1 %}
+                <h3>{{post.title}}</h3>
+                {{post.content}}
+                {% endfor %}
+              </article>
+              <a href="#contact" class="button">Contact Us for Details</a>
+            </div>
           </div>
         </div>
       </section>
