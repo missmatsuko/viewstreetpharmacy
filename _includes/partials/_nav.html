@@ -1,0 +1,19 @@
+<section class="row between align-middle" id="siteNav" data-component="sticky">
+  <div class="col mobile-nav">
+    <a href="{% if page.url == '/' %}#home{% else %}/{% endif %}" class="logo">View Street Pharmacy</a>
+    <button class="show-sm" data-component="toggleme" data-target="#toggleNav" id="toggleNavButton">
+      <span class="kube-menu" aria-label="toggle site navigation"></span>
+    </button>
+  </div>
+  <div class="col hide-sm" id="toggleNav">
+    <nav class="tabs">
+      <ul>
+        <li {% if page.url == '/' %}class="activeliquid "{% endif %}><a href="{% if page.url != '/' %}/{% endif %}#home">Home</a></li>
+        <li><a href="{% if page.url != '/' %}/{% endif %}#news">Hours &amp; News</a></li>
+        <li><a href="{% if page.url != '/' %}/{% endif %}#services">Services</a></li>
+        <li><a href="{% if page.url != '/' %}/{% endif %}#about">About</a></li>
+        <li><a href="{% if page.url != '/' %}/{% endif %}#contact">Contact</a></li>
+      </ul>
+    </nav>
+  </div>
+</section>
