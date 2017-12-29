@@ -54,6 +54,12 @@ small {
   font-weight: 600;
 }
 
+.list--unstyle {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
 .hours-list {
   dd:not(:last-child){
     margin-bottom: 0.5rem;
