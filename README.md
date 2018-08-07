@@ -6,3 +6,6 @@ One-page static website for View Street Pharmacy, a locally-owned pharmacy in Vi
 * jQuery [[website]](https://jquery.com/) [[github]](https://github.com/jquery/jquery)
 * Kube Framework [[website]](https://imperavi.com/kube/) [[github]](https://github.com/imperavi/kube)
 * SCSS [[website]](http://sass-lang.com/) [[github]](https://github.com/sass/sass)
+
+## Contributors
+* missmatsuko [[website]](https://matsuko.ca/) [[github]](https://github.com/missmatsuko)
